@@ -7,10 +7,10 @@ require('dotenv').config();
 const models = require('./models');
 
 // Routes
-// ----
+const entreprise_routes = require('./routes/entrepriseRoutes');
+
 
 const app = express();
-
 models.sequelize.sync();
 
 const corsOptions = {
@@ -23,8 +23,8 @@ app.use(express.json());
 app.use(helmet());
 
 // API
-console.log(path.join(__dirname, 'images'));
 app.use('/images', express.static(path.join(__dirname, '/public/images')));
+app.use('/api/entreprise', entreprise_routes);
 
 
 module.exports = app;
