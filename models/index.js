@@ -19,5 +19,6 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 // lister les models ici
+db.entreprise = require('./entrepriseModel')(sequelize, Sequelize);
 
 module.exports = db;
