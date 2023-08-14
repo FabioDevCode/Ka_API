@@ -4,16 +4,14 @@ const morgan = require('morgan');
 const path = require('path');
 const helmet = require('helmet');
 require('dotenv').config();
-const db = require('./models');
-const Initial = db.sequelize;
-
+const models = require('./models');
 
 // Routes
-const testRoutes = require('./routes/testRoutes.js');
+// ----
 
 const app = express();
 
-Initial.sync();
+models.sequelize.sync();
 
 const corsOptions = {
     origin: '*'
@@ -27,7 +25,6 @@ app.use(helmet());
 // API
 console.log(path.join(__dirname, 'images'));
 app.use('/images', express.static(path.join(__dirname, '/public/images')));
-app.use('/api', testRoutes);
 
 
 module.exports = app;

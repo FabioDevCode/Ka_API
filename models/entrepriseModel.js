@@ -12,11 +12,13 @@ module.exports = function(sequelize, DataTypes) {
         },
         siren: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            primaryKey: true
         },
         siret: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            primaryKey: true
         },
         complement_adresse: {
             type: DataTypes.STRING,
@@ -38,11 +40,9 @@ module.exports = function(sequelize, DataTypes) {
         },
         latitude: {
             type: DataTypes.STRING,
-            allowNull: false
         },
         longitude: {
             type: DataTypes.STRING,
-            allowNull: false
         }
     }, {
         sequelize,
