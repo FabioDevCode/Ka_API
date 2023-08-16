@@ -1,8 +1,8 @@
 # ka_api
 
-Node 18.16.1 ou plus
-Express.js
-MySQL
+Node 18.16.1 ou plus <br>
+Express.js<br>
+MySQL<br>
 
 ### Etape 1
 Créer une BBD "ka_companies" en MySQL
