@@ -38,6 +38,15 @@ module.exports = function(sequelize, DataTypes) {
         libelle_commune: {
             type: DataTypes.STRING,
         },
+        nombre_etablissements: {
+            type: DataTypes.STRING,
+        },
+        finances_annee: {
+            type: DataTypes.STRING,
+        },
+        finances_ca: {
+            type: DataTypes.STRING,
+        },
         latitude: {
             type: DataTypes.STRING,
         },

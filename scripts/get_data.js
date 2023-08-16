@@ -28,6 +28,9 @@ const models = require('../models');
                     libelle_voie: ent.siege?.libelle_voie,
                     code_postal: ent.siege?.code_postal,
                     libelle_commune: ent.siege?.libelle_commune,
+                    nombre_etablissements: ent.nombre_etablissements,
+                    finances_annee: Object.keys(ent.finances)[0]?.toString(),
+                    finances_ca: Object.keys(ent.finances)?.length > 0 ? parseInt(ent.finances[Object.keys(ent.finances)?.[0]]?.ca).toString() : null,
                     latitude: ent.siege?.latitude,
                     longitude: ent.siege?.longitude
                 }
