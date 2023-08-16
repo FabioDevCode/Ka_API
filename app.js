@@ -8,6 +8,7 @@ const models = require('./models');
 
 // Routes
 const entreprise_routes = require('./routes/entrepriseRoutes');
+const generate_routes = require('./routes/generateRoutes');
 
 
 const app = express();
@@ -30,6 +31,7 @@ app.use(helmet({
 // API
 app.use('/images', express.static(path.join(__dirname, '/public/images')));
 app.use('/api/entreprise', entreprise_routes);
+app.use('/api/generate', generate_routes);
 
 
 module.exports = app;

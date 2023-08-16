@@ -41,7 +41,7 @@ const get_all = async(req, res) => {
 
         res.status(200).json({
             ent: entreprises,
-            pages: Math.ceil(count / where.limit)
+            pages: pages
         })
     } catch (error) {
         console.error(error);
